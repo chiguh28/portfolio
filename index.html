@@ -19,24 +19,9 @@
             --accent: #f59e0b;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; background: var(--bg-dark); color: var(--text); line-height: 1.7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         /* Header */
         header {
@@ -66,21 +51,9 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
 
         /* Hero */
         .hero {
@@ -110,49 +83,18 @@
             align-items: center;
         }
 
-        .hero-text h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
+        .hero-text h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
         .hero-text h1 span {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .hero-text p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem; }
 
-        .hero-text p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .hero-visual {
-            position: relative;
-        }
+        .hero-stats { display: flex; gap: 3rem; margin-top: 2rem; }
+        .stat { text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); }
+        .stat-label { color: var(--text-muted); font-size: 0.9rem; }
 
         .code-block {
             background: var(--bg-card);
@@ -164,50 +106,23 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
-        .code-header {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 1rem;
-        }
-
-        .code-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
+        .code-header { display: flex; gap: 8px; margin-bottom: 1rem; }
+        .code-dot { width: 12px; height: 12px; border-radius: 50%; }
         .code-dot.red { background: #ff5f56; }
         .code-dot.yellow { background: #ffbd2e; }
         .code-dot.green { background: #27ca40; }
 
-        .code-content {
-            color: var(--text-muted);
-        }
-
+        .code-content { color: var(--text-muted); }
         .code-content .keyword { color: #c792ea; }
         .code-content .function { color: #82aaff; }
         .code-content .string { color: #c3e88d; }
         .code-content .comment { color: #546e7a; }
 
         /* Projects */
-        .projects {
-            padding: 100px 0;
-            background: var(--bg-dark);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-        }
+        .projects { padding: 100px 0; background: var(--bg-dark); }
+        .section-title { text-align: center; margin-bottom: 4rem; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .section-title p { color: var(--text-muted); }
 
         .projects-grid {
             display: grid;
@@ -221,6 +136,9 @@
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .project-card:hover {
@@ -229,7 +147,7 @@
         }
 
         .project-image {
-            height: 200px;
+            height: 180px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             display: flex;
             align-items: center;
@@ -237,56 +155,14 @@
             font-size: 4rem;
         }
 
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-
-        .tag {
-            background: rgba(99,102,241,0.2);
-            color: var(--primary);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-        }
-
-        .project-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .project-content p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: gap 0.3s;
-        }
-
-        .project-link:hover {
-            gap: 0.75rem;
-        }
+        .project-content { padding: 1.5rem; }
+        .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .tag { background: rgba(99,102,241,0.2); color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; }
+        .project-content h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .project-content p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
 
         /* Skills */
-        .skills {
-            padding: 100px 0;
-            background: linear-gradient(180deg, var(--bg-dark) 0%, #1a1a2e 100%);
-        }
-
+        .skills { padding: 100px 0; background: linear-gradient(180deg, var(--bg-dark) 0%, #1a1a2e 100%); }
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -301,34 +177,13 @@
             border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .skill-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
+        .skill-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .skill-card h3 { margin-bottom: 0.5rem; }
+        .skill-card p { color: var(--text-muted); font-size: 0.9rem; }
 
         /* Contact */
-        .contact {
-            padding: 100px 0;
-            background: var(--bg-dark);
-            text-align: center;
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
+        .contact { padding: 100px 0; background: var(--bg-dark); text-align: center; }
+        .contact-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
 
         .btn {
             display: inline-flex;
@@ -341,22 +196,10 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; }
+        .btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid rgba(255,255,255,0.2); }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-        }
-
-        .btn-secondary {
-            background: var(--bg-card);
-            color: var(--text);
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        /* Footer */
         footer {
             padding: 2rem;
             text-align: center;
@@ -366,26 +209,12 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-stats {
-                justify-content: center;
-            }
-
-            .hero-visual {
-                display: none;
-            }
-
-            .nav-links {
-                display: none;
-            }
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .hero-stats { justify-content: center; }
+            .hero-visual { display: none; }
+            .nav-links { display: none; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -409,7 +238,7 @@
                     <p>Python・GAS・スクレイピングで<br>面倒な作業を自動化します</p>
                     <div class="hero-stats">
                         <div class="stat">
-                            <div class="stat-number">10+</div>
+                            <div class="stat-number">15+</div>
                             <div class="stat-label">ツール開発</div>
                         </div>
                         <div class="stat">
@@ -452,7 +281,7 @@
                 <p>開発した自動化ツール・サービス</p>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <a href="projects/notify-therapists.html" class="project-card">
                     <div class="project-image">📱</div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -461,40 +290,116 @@
                             <span class="tag">FastAPI</span>
                         </div>
                         <h3>セラピスト通知 for LINE</h3>
-                        <p>お気に入りのセラピストの出勤スケジュールをLINEで自動通知。19サイト対応、サブスクリプションモデル。</p>
-                        <a href="#" class="project-link">詳細を見る →</a>
+                        <p>お気に入りのセラピストの出勤スケジュールをLINEで自動通知。19サイト対応。</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="project-image">📊</div>
+                <a href="projects/write-blog.html" class="project-card">
+                    <div class="project-image">✍️</div>
                     <div class="project-content">
                         <div class="project-tags">
-                            <span class="tag">Google Apps Script</span>
-                            <span class="tag">スクレイピング</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Claude API</span>
                         </div>
-                        <h3>Yahoo!トラベル価格追跡</h3>
-                        <p>Yahoo!トラベルのホテル価格を定期監視し、スプレッドシートに自動記録。グラフで推移を可視化。</p>
-                        <a href="#" class="project-link">詳細を見る →</a>
+                        <h3>AI体験談自動生成Webアプリ</h3>
+                        <p>フォーム入力だけで自然な体験談記事をAIが自動生成するWebアプリ。</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
+                <a href="projects/voice-writer.html" class="project-card">
+                    <div class="project-image">🎤</div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Claude SDK</span>
+                            <span class="tag">Whisper</span>
+                        </div>
+                        <h3>音声入力AIライター</h3>
+                        <p>話すだけで記事が完成。音声入力とClaude AIを組み合わせたライティングツール。</p>
+                    </div>
+                </a>
+
+                <a href="projects/rakuten-room.html" class="project-card">
                     <div class="project-image">🛒</div>
                     <div class="project-content">
                         <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">AI</span>
+                            <span class="tag">TypeScript</span>
                             <span class="tag">楽天API</span>
+                            <span class="tag">AI生成</span>
                         </div>
                         <h3>楽天Room自動投稿ツール</h3>
-                        <p>AIが商品説明を自動生成し、楽天Roomに定期投稿。寝ている間にポイントが増える魔法のツール。</p>
-                        <a href="#" class="project-link">詳細を見る →</a>
+                        <p>AIが商品説明を自動生成し、楽天Roomに定期投稿。アフィリエイト収益を自動化。</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="project-image">🌐</div>
+                <a href="projects/therapists-gacha.html" class="project-card">
+                    <div class="project-image">🎰</div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Playwright</span>
+                            <span class="tag">ゲーミフィケーション</span>
+                        </div>
+                        <h3>セラピストガチャ</h3>
+                        <p>今日出勤のセラピストからランダムに1人選ぶガチャWebアプリ。</p>
+                    </div>
+                </a>
+
+                <a href="projects/shogun-dashboard.html" class="project-card">
+                    <div class="project-image">🏯</div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">WebSocket</span>
+                            <span class="tag">Multi-Agent</span>
+                        </div>
+                        <h3>Shogun Dashboard</h3>
+                        <p>マルチエージェントAIシステムをモバイルから監視・制御するダッシュボード。</p>
+                    </div>
+                </a>
+
+                <a href="projects/web-monitor.html" class="project-card">
+                    <div class="project-image">🔍</div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Rust</span>
+                            <span class="tag">高速処理</span>
+                            <span class="tag">差分検知</span>
+                        </div>
+                        <h3>Webモニタリングツール</h3>
+                        <p>Webサイトの変更を自動検知し、即座に通知。価格変動・在庫復活を見逃さない。</p>
+                    </div>
+                </a>
+
+                <a href="projects/budget-tracking.html" class="project-card">
+                    <div class="project-image">💰</div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">iOS</span>
+                            <span class="tag">Swift</span>
+                            <span class="tag">SwiftUI</span>
+                        </div>
+                        <h3>Budget Battle App</h3>
+                        <p>ゲーミフィケーション要素を取り入れた家計管理iOSアプリ。</p>
+                    </div>
+                </a>
+
+                <a href="projects/voice-controlled-camera.html" class="project-card">
+                    <div class="project-image">📷</div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">音声認識</span>
+                        </div>
+                        <h3>音声制御カメラアプリ</h3>
+                        <p>高齢者向け・手が不自由な方向けの音声で操作できるカメラアプリ。</p>
+                    </div>
+                </a>
+
+                <div class="project-card" style="cursor: default;">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">🌐</div>
                     <div class="project-content">
                         <div class="project-tags">
                             <span class="tag">Python</span>
@@ -502,34 +407,31 @@
                             <span class="tag">BeautifulSoup</span>
                         </div>
                         <h3>Webスクレイピング代行</h3>
-                        <p>ECサイト、不動産、求人など様々なサイトからデータを自動収集。定期実行・差分検知対応。</p>
-                        <a href="#" class="project-link">詳細を見る →</a>
+                        <p>ECサイト、不動産、求人など様々なサイトからデータを自動収集。定期実行対応。</p>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">📝</div>
+                <div class="project-card" style="cursor: default;">
+                    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #06b6d4);">📊</div>
                     <div class="project-content">
                         <div class="project-tags">
-                            <span class="tag">Selenium</span>
-                            <span class="tag">自動化</span>
+                            <span class="tag">GAS</span>
+                            <span class="tag">スクレイピング</span>
                         </div>
-                        <h3>EC出品自動化</h3>
-                        <p>メルカリ、ヤフオク、BUYMAなどへの出品作業を自動化。画像処理、説明文生成、価格調整対応。</p>
-                        <a href="#" class="project-link">詳細を見る →</a>
+                        <h3>価格追跡ツール</h3>
+                        <p>Yahoo!トラベル等のホテル価格を定期監視し、スプレッドシートに自動記録。</p>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">📧</div>
+                <div class="project-card" style="cursor: default;">
+                    <div class="project-image" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">📧</div>
                     <div class="project-content">
                         <div class="project-tags">
                             <span class="tag">GAS</span>
                             <span class="tag">Gmail API</span>
                         </div>
                         <h3>メール自動処理システム</h3>
-                        <p>特定条件のメールを自動分類、転送、返信。Googleスプレッドシートとの連携でデータ管理も自動化。</p>
-                        <a href="#" class="project-link">詳細を見る →</a>
+                        <p>特定条件のメールを自動分類、転送、返信。スプレッドシート連携も。</p>
                     </div>
                 </div>
             </div>
@@ -549,6 +451,11 @@
                     <p>スクレイピング、自動化、API開発</p>
                 </div>
                 <div class="skill-card">
+                    <div class="skill-icon">📘</div>
+                    <h3>TypeScript / Next.js</h3>
+                    <p>Webアプリ、API、フルスタック開発</p>
+                </div>
+                <div class="skill-card">
                     <div class="skill-icon">📊</div>
                     <h3>Google Apps Script</h3>
                     <p>スプレッドシート自動化、定期実行</p>
@@ -560,18 +467,13 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🤖</div>
-                    <h3>Bot開発</h3>
-                    <p>LINE Bot, Discord Bot, Telegram Bot</p>
+                    <h3>AI / Bot開発</h3>
+                    <p>Claude API, LINE Bot, Discord Bot</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>API連携</h3>
-                    <p>REST API, OAuth, Webhook</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>データ処理</h3>
-                    <p>CSV/Excel処理、DB連携、ETL</p>
+                    <div class="skill-icon">📱</div>
+                    <h3>モバイルアプリ</h3>
+                    <p>Flutter, Swift, iOS/Android</p>
                 </div>
             </div>
         </div>
@@ -590,7 +492,7 @@
                 <a href="https://www.lancers.jp/profile/takeru-11" class="btn btn-secondary" target="_blank">
                     💼 ランサーズで依頼
                 </a>
-                <a href="https://github.com/" class="btn btn-secondary" target="_blank">
+                <a href="https://github.com/chiguh28" class="btn btn-secondary" target="_blank">
                     🐙 GitHub
                 </a>
             </div>
